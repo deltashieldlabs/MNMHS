@@ -94,6 +94,7 @@ const translations = {
     'footer.link.contact': 'Contact',
     'footer.contact': 'Contact',
     'footer.copyright': '© 2026 M.N.M High School. All rights reserved.',
+    'footer.credit': '© This site is developed and managed by Abhishek Arloor.',
     'contact.title': 'Get in touch',
     'contact.subtitle': 'We look forward to helping your child begin a strong school journey.',
     'contact.form.name': 'Full Name',
@@ -258,6 +259,7 @@ const translations = {
     'footer.link.contact': 'ಸಂಪರ್ಕ',
     'footer.contact': 'ಸಂಪರ್ಕ',
     'footer.copyright': '© 2026 ಎಂ.ಎನ್.ಎಂ. ಪ್ರೌಢಶಾಲೆ. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.',
+    'footer.credit': '© ಈ ವೆಬ್‌ಸೈಟ್ ಅನ್ನು ಅಭಿಷೇಕ್ ಅರ್ಲೂರ್ ಅಭಿವೃದ್ಧಿಪಡಿಸಿ ನಿರ್ವಹಿಸುತ್ತಿದ್ದಾರೆ.',
     'contact.title': 'ಸಂಪರ್ಕಿಸಿ',
     'contact.subtitle': 'ನಿಮ್ಮ ಮಗುವಿನ ಉತ್ತಮ ಶೈಕ್ಷಣಿಕ ಪಯಣಕ್ಕೆ ನೆರವಾಗಲು ನಾವು ಸಿದ್ಧರಿದ್ದೇವೆ.',
     'contact.form.name': 'ಪೂರ್ಣ ಹೆಸರು',
@@ -350,7 +352,7 @@ document.querySelectorAll('.nav-menu a').forEach((link) => {
   }
 });
 
-const defaultLang = localStorage.getItem('mnm-lang') || 'en';
+const defaultLang = localStorage.getItem('mnm-lang') || 'kn';
 const langToggle = document.querySelector('[data-lang-toggle]');
 
 function applyLanguage(lang) {
