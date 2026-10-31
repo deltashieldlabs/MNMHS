@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reconnect with M.N.M High School through Alumni Connect." />
+    <title data-i18n-title="alumni.documentTitle">Alumni Connect | M.N.M High School</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="brand" aria-label="M.N.M High School home">
+          <img class="brand-mark" src="logo.svg" alt="" aria-hidden="true" />
+          <div class="brand-text">
+            <strong data-i18n="brand.name">M.N.M High School</strong>
+            <span class="brand-affiliation"><span class="affiliation-full" data-i18n="brand.affiliation">(Affiliated to Karnataka School Examination and Assessment Board (KSEAB))</span><span class="affiliation-short" data-i18n="brand.affiliation.short">(KSEAB affiliated)</span></span>
+            <span data-i18n="brand.location">Vidyagiri, Gangavathi</span>
+          </div>
+        </a>
+        <div class="nav-right">
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+          <div class="nav-menu">
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About</a>
+            <a href="academics.html" data-i18n="nav.academics">Academics</a>
+            <a href="admissions.html" data-i18n="nav.admissions">Admissions</a>
+            <a href="facilities.html" data-i18n="nav.facilities">Facilities</a>
+            <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="alumni.html" data-i18n="nav.alumni">Alumni Connect</a>
+            <a class="nav-enquire-mobile" href="#enquiry-modal" data-enquiry-open aria-haspopup="dialog" data-i18n="nav.enquire">Enquire</a>
+          </div>
+          <a class="nav-enquire" href="#enquiry-modal" data-enquiry-open aria-haspopup="dialog" data-i18n="nav.enquire">Enquire</a>
+          <button class="lang-toggle" type="button" data-lang-toggle aria-label="Toggle language">ಕನ್ನಡ</button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <div class="page-intro">
+            <span class="eyebrow eyebrow-secondary" data-i18n="alumni.label">Alumni Connect</span>
+            <h1 data-i18n="alumni.heading">Once a student, always part of M.N.M.</h1>
+            <p data-i18n="alumni.intro">Reconnect with your school, meet fellow alumni, share your journey and help inspire the next generation.</p>
+          </div>
+          <div class="page-hero-panel">
+            <img src="https://images.pexels.com/photos/40377997/pexels-photo-40377997.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Former classmates reconnecting at a school gathering" />
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section muted-section">
+        <div class="container alumni-layout">
+          <div class="alumni-welcome">
+            <span class="eyebrow" data-i18n="alumni.welcome.label">Stay Connected</span>
+            <h2 data-i18n="alumni.welcome.title">Your school story continues here.</h2>
+            <p data-i18n="alumni.welcome.text">Join the alumni directory to stay in touch with M.N.M High School and fellow graduates. Share your details below to express your interest in connecting.</p>
+            <div class="alumni-benefits">
+              <div><span aria-hidden="true">01</span><p data-i18n="alumni.benefit.one">Reconnect with classmates and teachers</p></div>
+              <div><span aria-hidden="true">02</span><p data-i18n="alumni.benefit.two">Hear about school events and reunions</p></div>
+              <div><span aria-hidden="true">03</span><p data-i18n="alumni.benefit.three">Share your experience with current students</p></div>
+            </div>
+          </div>
+
+          <div class="contact-card alumni-form-card">
+            <h2 data-i18n="alumni.form.title">Join Alumni Connect</h2>
+            <p data-i18n="alumni.form.note">Complete the form and choose WhatsApp or email to send your details to the school.</p>
+            <form class="enquiry-form alumni-form" data-form-type="alumni">
+              <div class="form-grid">
+                <div>
+                  <label for="alumni-name" data-i18n="contact.form.name">Full Name</label>
+                  <input class="field" id="alumni-name" name="name" type="text" autocomplete="name" placeholder="Your name" data-i18n-placeholder="contact.form.name.placeholder" required />
+                </div>
+                <div>
+                  <label for="alumni-year" data-i18n="alumni.form.year">Year of leaving school</label>
+                  <input class="field" id="alumni-year" name="year" type="number" min="1950" max="2099" placeholder="e.g. 2012" data-i18n-placeholder="alumni.form.year.placeholder" required />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div>
+                  <label for="alumni-phone" data-i18n="contact.form.phone">Phone Number</label>
+                  <input class="field" id="alumni-phone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number" data-i18n-placeholder="contact.form.phone.placeholder" required />
+                </div>
+                <div>
+                  <label for="alumni-email" data-i18n="contact.form.email">Email Address</label>
+                  <input class="field" id="alumni-email" name="email" type="email" autocomplete="email" placeholder="Your email address" data-i18n-placeholder="contact.form.email.placeholder" />
+                </div>
+              </div>
+              <div class="form-grid">
+                <div>
+                  <label for="alumni-city" data-i18n="alumni.form.city">Current city</label>
+                  <input class="field" id="alumni-city" name="city" type="text" autocomplete="address-level2" placeholder="City you live in" data-i18n-placeholder="alumni.form.city.placeholder" />
+                </div>
+                <div>
+                  <label for="alumni-profession" data-i18n="alumni.form.profession">Profession (optional)</label>
+                  <input class="field" id="alumni-profession" name="profession" type="text" placeholder="Your profession" data-i18n-placeholder="alumni.form.profession.placeholder" />
+                </div>
+              </div>
+              <div>
+                <label for="alumni-message" data-i18n="alumni.form.message">A note to your school (optional)</label>
+                <textarea id="alumni-message" name="message" placeholder="Share a memory or how you would like to stay involved" data-i18n-placeholder="alumni.form.message.placeholder"></textarea>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary submit-btn" type="submit" name="submit-method" value="whatsapp" data-i18n="contact.form.whatsapp">Send via WhatsApp</button>
+                <button class="btn btn-secondary submit-btn" type="submit" name="submit-method" value="email" data-i18n="contact.form.email-submit">Send via Email</button>
+              </div>
+              <p class="form-status" role="status" aria-live="polite" data-i18n="alumni.form.hint">Your message opens in WhatsApp or your email app so you can review and send it.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3 data-i18n="brand.name">M.N.M High School</h3>
+          <p data-i18n="footer.location">Jaya Nagar, Gangavathi, Karnataka 583227</p>
+          <p data-i18n="footer.classes">Classes: 8, 9 and 10</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.quick">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="footer.link.about">About Us</a></li>
+            <li><a href="alumni.html" data-i18n="nav.alumni">Alumni Connect</a></li>
+            <li><a href="contact.html" data-i18n="footer.link.contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <ul>
+            <li>📞 +91 98765 43210</li>
+            <li>✉️ principal@mnmhighschool.edu.in</li>
+            <li data-i18n="footer.address.short">📍 Jaya Nagar, Gangavathi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom"><p data-i18n="footer.copyright">© 2026 M.N.M High School. All rights reserved.</p></div>
+    </footer>
+
+    <dialog class="enquiry-dialog" id="enquiry-modal" aria-labelledby="enquiry-modal-title">
+      <div class="enquiry-modal-header"><div><span class="eyebrow eyebrow-secondary" data-i18n="enquiry.modal.eyebrow">Admissions • Classes 8–10</span><h2 id="enquiry-modal-title" data-i18n="enquiry.modal.title">Make an Enquiry</h2><p data-i18n="enquiry.modal.description">Tell us a little about your child and the class of interest. We will help you with the next steps.</p></div><button class="enquiry-modal-close" type="button" data-enquiry-close aria-label="Close enquiry form">×</button></div>
+      <form class="enquiry-form enquiry-modal-form"><div class="form-grid"><div><label for="modal-name" data-i18n="contact.form.name">Full Name</label><input class="field" id="modal-name" name="name" type="text" data-i18n-placeholder="contact.form.name.placeholder" placeholder="Your name" autocomplete="name" required /></div><div><label for="modal-phone" data-i18n="contact.form.phone">Phone Number</label><input class="field" id="modal-phone" name="phone" type="tel" data-i18n-placeholder="contact.form.phone.placeholder" placeholder="Your phone number" autocomplete="tel" required /></div></div>
+        <div class="form-grid"><div><label for="modal-email" data-i18n="contact.form.email">Email Address</label><input class="field" id="modal-email" name="email" type="email" data-i18n-placeholder="contact.form.email.placeholder" placeholder="Your email address" autocomplete="email" /></div><div><label for="modal-class" data-i18n="contact.form.class">Class Interested</label><select class="field" id="modal-class" name="class" required><option value="" data-i18n="contact.form.class.placeholder">Select class</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div></div>
+        <div><label for="modal-message" data-i18n="contact.form.message">Message</label><textarea id="modal-message" name="message" data-i18n-placeholder="contact.form.message.placeholder" placeholder="Tell us about your enquiry"></textarea></div><div class="form-actions"><button class="btn btn-primary submit-btn" type="submit" name="submit-method" value="whatsapp" data-i18n="contact.form.whatsapp">Send via WhatsApp</button><button class="btn btn-secondary submit-btn" type="submit" name="submit-method" value="email" data-i18n="contact.form.email-submit">Send via Email</button></div><p class="form-status" role="status" aria-live="polite" data-i18n="contact.form.hint">WhatsApp or your email app will open with your enquiry ready to send.</p></form>
+    </dialog>
+
+    <a class="floating-whatsapp" href="https://wa.me/919876543210?text=Hello%20M.N.M%20High%20School%2C%20I%20would%20like%20to%20reconnect%20as%20an%20alumnus." data-whatsapp-en="https://wa.me/919876543210?text=Hello%20M.N.M%20High%20School%2C%20I%20would%20like%20to%20reconnect%20as%20an%20alumnus." data-whatsapp-kn="https://wa.me/919876543210?text=%E0%B2%A8%E0%B2%AE%E0%B2%B8%E0%B3%8D%E0%B2%95%E0%B2%BE%E0%B2%B0%2C%20%E0%B2%8E%E0%B2%82.%E0%B2%8E%E0%B2%A8%E0%B3%8D.%E0%B2%8E%E0%B2%82.%20%E0%B2%B9%E0%B2%B3%E0%B3%86%E0%B2%AF%20%E0%B2%B5%E0%B2%BF%E0%B2%A6%E0%B3%8D%E0%B2%AF%E0%B2%BE%E0%B2%B0%E0%B3%8D%E0%B2%A5%E0%B2%BF%E0%B2%97%E0%B2%B3%20%E0%B2%B8%E0%B2%82%E0%B2%98%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B3%86%20%E0%B2%B8%E0%B3%87%E0%B2%B0%E0%B2%B2%E0%B3%81%20%E0%B2%AC%E0%B2%AF%E0%B2%B8%E0%B2%BF%E0%B2%A6%E0%B3%8D%E0%B2%A6%E0%B3%87%E0%B2%A8%E0%B3%86." target="_blank" rel="noreferrer" aria-label="WhatsApp contact" data-i18n="contact.floating.whatsapp">WhatsApp</a>
+    <script src="script.js"></script>
+  </body>
+</html>

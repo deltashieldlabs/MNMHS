@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 80" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">M.N.M High School crest</title>
+  <path d="M36 3 66 13v24c0 18-12 30-30 40C18 67 6 55 6 37V13L36 3Z" fill="#163b5d" stroke="#4b8dbb" stroke-width="3"/>
+  <path d="M36 10 59 17v20c0 14-9 24-23 32-14-8-23-18-23-32V17l23-7Z" fill="none" stroke="#d7e8f5" stroke-width="1.5"/>
+  <path d="M20 24c6-2 11-1 16 3 5-4 10-5 16-3v15c-6-2-11-1-16 3-5-4-10-5-16-3V24Z" fill="#fff"/>
+  <path d="M36 27v15" fill="none" stroke="#4b8dbb" stroke-width="2"/>
+  <path d="M24 28c3-.6 6 0 9 2v7c-3-2-6-2.5-9-2V28Zm24 0c-3-.6-6 0-9 2v7c3-2 6-2.5 9-2V28Z" fill="#b8d7ec"/>
+  <text x="36" y="55" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="10" font-weight="700" letter-spacing="1">MNM</text>
+</svg>
