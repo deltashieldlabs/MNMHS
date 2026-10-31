@@ -333,6 +333,70 @@ const translations = {
 
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
+const backgroundVideos = document.querySelectorAll('[data-background-video]');
+
+if (backgroundVideos.length > 0) {
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const videoStates = new Map(
+    Array.from(backgroundVideos, (video) => {
+      const sequence = video.dataset.videoSequence?.split('|').filter(Boolean) || [];
+      video.loop = sequence.length < 2;
+
+      return [video, { sequence, sequenceIndex: 0, visibleRatio: 0 }];
+    })
+  );
+  let activeVideo = null;
+
+  const syncBackgroundVideos = () => {
+    const nextActiveVideo = motionPreference.matches
+      ? null
+      : Array.from(videoStates.entries())
+          .filter(([, state]) => state.visibleRatio > 0)
+          .sort((left, right) => right[1].visibleRatio - left[1].visibleRatio)[0]?.[0] || null;
+
+    videoStates.forEach((state, video) => {
+      if (video !== nextActiveVideo) {
+        video.pause();
+      }
+    });
+
+    activeVideo = nextActiveVideo;
+    if (activeVideo && activeVideo.paused) {
+      activeVideo.play().catch((error) => {
+        if (error.name !== 'AbortError') {
+          console.error('Unable to play a homepage background video.', error);
+        }
+      });
+    }
+  };
+
+  videoStates.forEach((state, video) => {
+    if (state.sequence.length > 1) {
+      video.addEventListener('ended', () => {
+        state.sequenceIndex = (state.sequenceIndex + 1) % state.sequence.length;
+        video.src = state.sequence[state.sequenceIndex];
+        video.load();
+
+        if (activeVideo === video) {
+          syncBackgroundVideos();
+        }
+      });
+    }
+  });
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      videoStates.get(entry.target).visibleRatio = entry.isIntersecting
+        ? entry.intersectionRatio
+        : 0;
+    });
+
+    syncBackgroundVideos();
+  }, { threshold: [0, 0.05, 0.25, 0.5, 0.75, 1] });
+
+  backgroundVideos.forEach((video) => videoObserver.observe(video));
+  motionPreference.addEventListener('change', syncBackgroundVideos);
+}
 
 if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {

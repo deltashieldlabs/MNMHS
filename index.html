@@ -11,12 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="home-page">
     <nav class="navbar">
       <div class="container nav-inner">
         <a href="index.html" class="brand" aria-label="M.N.M High School home">
@@ -58,6 +58,10 @@
 
     <main>
       <section class="hero">
+        <video class="hero-video" data-background-video data-video-sequence="assets/school-hero.mp4|assets/school-scroll.mp4" muted playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/school-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-video-overlay" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-content">
             <span class="eyebrow" data-i18n="hero.badge">Karnataka State Board • Kannada Medium</span>
@@ -76,22 +80,6 @@
             </ul>
           </div>
 
-          <div class="hero-visual">
-            <div class="hero-image-wrap">
-              <img
-                src="https://images.pexels.com/photos/40377997/pexels-photo-40377997.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400"
-                alt="Indian school students gathered outdoors at a school event"
-              />
-            </div>
-            <div class="floating-card card-one">
-              <strong>08–10</strong>
-              <span data-i18n="stats.classes">Classes</span>
-            </div>
-            <div class="floating-card card-two">
-              <strong>ಕನ್ನಡ</strong>
-              <span data-i18n="stats.medium">Kannada medium</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -116,7 +104,11 @@
         </div>
       </section>
 
-      <section class="page-section">
+      <section class="page-section scroll-video-section">
+        <video class="scroll-section-video" data-background-video muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/school-sections.mp4" type="video/mp4" />
+        </video>
+        <div class="scroll-video-overlay" aria-hidden="true"></div>
         <div class="container split-grid">
           <div class="image-panel">
             <img src="https://images.pexels.com/photos/3231359/pexels-photo-3231359.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Indian schoolgirls listening in a classroom" />
@@ -135,7 +127,11 @@
         </div>
       </section>
 
-      <section class="page-section muted-section">
+      <section class="page-section muted-section scroll-video-section">
+        <video class="scroll-section-video" data-background-video muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/school-sections.mp4" type="video/mp4" />
+        </video>
+        <div class="scroll-video-overlay" aria-hidden="true"></div>
         <div class="container">
           <div class="section-heading center">
             <span class="eyebrow eyebrow-secondary" data-i18n="why.label">Why Choose Us</span>
