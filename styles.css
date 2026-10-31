@@ -793,6 +793,14 @@ textarea {
   font-weight: 700;
 }
 
+.contact-card h3 {
+  color: var(--primary-dark);
+}
+
+.contact-card a.btn-primary {
+  color: #fff;
+}
+
 @media (max-width: 980px) {
   .four-col,
   .three-col,
@@ -965,6 +973,10 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.085em;
   text-transform: uppercase;
+}
+
+.brand-text > span:not(.brand-affiliation) {
+  font-weight: 700;
 }
 
 .brand-text .brand-affiliation {
@@ -1636,6 +1648,7 @@ label {
 
   .nav-inner {
     display: flex;
+    position: relative;
     min-height: 0;
     padding: 6px 0;
     gap: 10px;
@@ -1643,15 +1656,8 @@ label {
 
   .nav-right {
     display: flex;
+    position: static;
     gap: 10px;
-  }
-
-  .navbar .nav-inner .nav-right .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 5;
   }
 
   .nav-menu {
